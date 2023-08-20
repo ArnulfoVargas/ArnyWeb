@@ -32,7 +32,11 @@
 .float-right > p:first-child{
     font-weight: bold;
 }
-
+.bold{
+    font-weight: bold;
+    text-align: center;
+    margin: 5px;
+}
 ul > li:nth-child(2n){
     color: red;
 }
@@ -49,16 +53,31 @@ ol > li:nth-child(3n){
     border-radius: 20px;
 }
 
-#last_box{
+.box:where(#one){
     margin: 0 auto;   
-    background-color: crimson;
-    width: 60vw;
-    height: 200px;
-    border: double 5px black;
+    background-color: brown;
+    width: 25vw;
+    height: 30vh;
+    border: double 7px black;
+    display: flex;
     align-items: center;
 }
-#last_box > div {
-    width: 90%;
-    border: dotted 5px blue;
-    background-color: beige;
+.box:where(#two) {
+    width: 70%;
+    height: 70%;
+    border: dashed 7px white;
+    background-color: khaki;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+.box:where(#three) {
+    width: 70%;
+    height: 70%;
+    border: solid 7px blue;
+    background-color: darkcyan;
+    margin:auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
