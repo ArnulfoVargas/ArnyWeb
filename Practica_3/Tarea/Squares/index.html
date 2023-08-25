@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Squares</title>
+</head>
+<style>
+    #grid{
+        display: grid;
+        grid-template-columns: repeat(24, 30px);
+        grid-template-rows: repeat(24, 30px);
+    }
+    #grid>div:first-child{
+        background-color: red;
+        grid-row: 1 / span 3;
+        grid-column: 2 / span 3;
+    }
+    #grid>div:nth-child(2){
+        background-color: greenyellow;
+        grid-row: 3 / span 8;
+        grid-column: 18 / span 2;
+    }
+    #grid>div:nth-child(3){
+        background-color: yellow;
+        grid-row: 20 / span 3;
+        grid-column: 3 / span 6;
+    }
+    #grid>div:last-child{
+        background-color: darkcyan;
+        grid-row: 13 / span 12;
+        grid-column: 13 / span 12;
+    }
+    .block{
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+<body>
+    <div id="grid">
+        <div class="block"><p>3x3</p></div>
+        <div class="block"><p>2x8</p></div>
+        <div class="block"><p>6x3</p></div>
+        <div class="block"><p>12x12</p></div>
+    </div>
+
+    <footer>
+        <a href="../iPhone/index.html">Practica iphone</a>
+        <a href="../SideBar/index.html">Practica sidebar</a>
+    </footer>
+</body>
+</html>
