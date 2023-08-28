@@ -4,17 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript</title>
+
+    <link rel="stylesheet" href="./CSS/styles.css">
     <script defer src="./JS/index.js"></script>
 </head>
 <body>
     
     <form action="">
-        <label for="name">Name:</label>
-        <input type="text" name="name">
-        <br>
-        <label for="">Last name:</label>
-        <input type="text">
+        <fieldset>
+            <legend class="info">User Data</legend>
+
+            <div id="data-containter">
+                <label for="name" class="info">Name:</label>
+                <input type="text" name="name" id="name" autocomplete="off">
+                <label for="age" class="info">Age:</label>
+                <input type="number" name="age" id="age">
+                <label for="dir" class="info">Direction:</label>
+                <input type="text" name="dir" id="dir" autocomplete="off">
+                <label for="drugs" class="info">Drugs:</label>
+                <input type="checkbox" name="drugs" id="drugs">
+            </div>
+
+            <button id="send" type="button">Submit</button>
+        </fieldset>
     </form>
+
+    <div hidden id="results">
+        <h2>Results:</h2>
+        <p id="stringify"></p>
+    </div>
 
 </body>
 </html>
