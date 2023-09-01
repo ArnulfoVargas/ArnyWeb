@@ -21,8 +21,6 @@ const data = async() => {
         text += "<p>" + activity + "</p>" +
         "<p><strong>For: </strong> " + participants + " participants</p> <hr>";
 
-        console.log(text)
-
         results.innerHTML = "<h1>Results</h1> <hr>" + text;
     }
     catch{
