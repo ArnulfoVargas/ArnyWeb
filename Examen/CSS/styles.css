@@ -51,6 +51,7 @@ footer{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    width: 100%;
     background-color: var(--third);
     height: 120px;
 }
@@ -60,6 +61,7 @@ footer{
     font-weight: bold;
     font-size: var(--font-size-lg);
     font-family: var(--title-font);
+    text-overflow: ellipsis;
 }
 
 .subtitle{
@@ -67,12 +69,14 @@ footer{
     font-weight: bold;
     font-size: var(--font-size-sm);
     font-family: var(--title-font);
+    text-overflow: ellipsis;
 }
 
 .normal-text{
     margin: 0;
     font-size: var(--font-size-sm);
     font-family: var(--main-font);
+    text-overflow: ellipsis;
 }
 
 .nav-button{
@@ -315,7 +319,8 @@ footer{
 
 .quantity-block{
     display: grid;
-    grid-template-columns: 15% 80%;
+    grid-template-columns: 50px 1fr;
+    padding: 0 10px;
     gap: 5%;
 }
 .add-cart-quantity{
@@ -360,7 +365,64 @@ footer{
     display: grid;
     grid-template-columns: 3fr 1fr 2fr;
     grid-template-rows: 45px repeat(5, 70px) 45px;
-    margin: auto;
+}
+#cart-holder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#resourses{
+    list-style: disc;
+    color: var(--main);
+    width: fit-content;
+}
+
+#resourses > li > a{
+    padding: 0;
+}
+
+#resourses > li > a:visited, #resourses > li > a:link{
+    color: var(--secondary);
+}
+#resourses > li:hover a{
+    animation-name: resoursesAnim;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+#resourses > li:hover{
+    animation-name: deleteDecoration;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes deleteDecoration {
+    0%{
+        color: var(--main);
+    }
+    50%{
+        color: transparent;
+    }
+    100%{
+        list-style: none;
+    }
+}
+
+@keyframes resoursesAnim{
+    0%{
+        padding: 0;
+        border-radius: 0;
+    }
+    50%{
+        padding: 0 20px;
+        border-radius: var(--border-radius);
+    }
+    100%{
+        color: var(--light);
+        padding: 0 20px;
+        background-color: var(--main);
+        border-radius: var(--border-radius);
+    }
 }
 
 #social-media{
