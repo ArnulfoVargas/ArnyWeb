@@ -30,6 +30,14 @@
 
 body{
     margin: 0;
+
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+article{
+    flex: 1;
 }
 
 a{
