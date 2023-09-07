@@ -28,8 +28,33 @@
     </nav>
 
     <section>
+        <div class="section-title">
+            <p>Game</p>
+        </div>
+        <div class="section-body">
+            <p class="title" id="hex"></p>
 
-        <!-- Content -->
+            <div id="game-card-holder">
+
+                <div class="game-card">
+                    <div class="card-color" id="color-one"></div>
+                    <div class="game-button" id="color-button-one"><p class="title">Select</p></div>
+                </div>
+
+                <div class="game-card">
+                    <div class="card-color" id="color-two"></div>
+                    <div class="game-button" id="color-button-two"><p class="title">Select</p></div>
+                </div>
+
+                <div class="game-card">
+                    <div class="card-color" id="color-three"></div>
+                    <div class="game-button" id="color-button-three"><p class="title">Select</p></div>
+                </div>
+            </div>
+
+            <div class="continue-button-locked" id="continue-button"><p class="title">Locked</p></div>
+
+        </div>
 
     </section>
 
@@ -56,6 +81,7 @@
             </div>
         </div>
     </footer>
-    <script src="../JS/index.js"></script>
+
+    <script src="../JS/game.js"></script>
 </body>
 </html>

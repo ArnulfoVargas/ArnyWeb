@@ -19,6 +19,8 @@
     --margin-horizontal: 10px;
     --border-radius: 10px;
 
+    --box-shadow: 1px 1px 1px 1px var(--shadow);
+
     --nav-button-width: 150px;
     --nav-button-height: 50%;
 
@@ -149,7 +151,7 @@ footer{
     height: 300px;
     width: 200px;
     border-radius: 20px;
-    box-shadow: 1px 1px 1px 1px var(--shadow);
+    box-shadow: var(--box-shadow);
 }
 
 .card-data{
@@ -189,7 +191,7 @@ footer{
 
 @keyframes cardAnim {
     from{
-        box-shadow: 1px 1px 1px 1px var(--shadow);
+        box-shadow: var(--box-shadow);
         height: 300px;
         width: 200px;
     }
@@ -253,6 +255,8 @@ footer{
     text-align: center;
     border-radius: var(--border-radius);
     background-color: var(--main);
+
+    cursor: pointer;
 }
 .add-cart:hover{
     animation-name: cartShadow;
@@ -262,7 +266,7 @@ footer{
 
 @keyframes itemCardAnim {
     from{
-        box-shadow: 1px 1px 1px 1px var(--shadow);
+        box-shadow: var(--box-shadow);
         height: 480px;
         width: 300px;
     }
@@ -331,6 +335,7 @@ footer{
     width: 100%;
     height: 80%;
     color: var(--light);
+    cursor: pointer;
 
     border-radius: var(--border-radius);
 }
@@ -357,6 +362,176 @@ footer{
     justify-content: space-around;
     flex-wrap: wrap;
     margin: 20px 0;
+}
+
+.game-card{
+    width: 200px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 7.5%;
+    align-items: center;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.game-card:hover{
+    animation-name: gameCard;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+.card-color{
+    height: 65%;
+    width: 100%;
+    background-color: red;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+.game-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20%;
+    width: 85%;
+    border-radius: var(--border-radius);
+    background-color: var(--main);
+    color: var(--light);
+
+    cursor: pointer;
+}
+
+.game-button:hover{
+    animation-name: cartShadow;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+.game-button:active{
+    animation-name: click;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+.locked{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20%;
+    width: 85%;
+    border-radius: var(--border-radius);
+    background-color: rgb(173, 173, 173);
+    color: var(--light);
+
+    cursor: context-menu;
+}
+
+@keyframes click{
+    0%{
+        background-color: var(--mainhovered);
+        box-shadow: 5px 5px var(--third);
+        width: 85%;
+    }
+    25%{
+        box-shadow: 7px 7px var(--third);
+    }
+    100%{
+        background-color: #ea1c2d;
+        box-shadow: 2px 2px var(--third);
+        width: 80%;
+    }
+}
+
+@keyframes gameCard{
+    from{
+        box-shadow: var(--box-shadow);
+        width: 200px;
+        height: 250px;
+    }
+    to{
+        box-shadow: 3px 3px 3px 3px var(--shadow);
+        width: 210px;
+        height: 262px;
+    }
+}
+
+.continue-button{
+    margin: 30px auto 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 200px;
+    border-radius: var(--border-radius);
+    background-color: var(--main);
+    color: var(--light);
+
+    cursor: pointer;
+}
+
+.continue-button-locked{
+    margin: 30px auto 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 200px;
+    border-radius: var(--border-radius);
+    background-color: rgb(173, 173, 173);
+    color: var(--light);
+
+    cursor: context-menu;
+}
+
+.continue-button:hover{
+    animation-name: continueHover;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+.continue-button:active{
+    animation-name: continueClick;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes continueHover{
+    from{
+        box-shadow: var(--box-shadow);
+        height: 50px;
+        width: 200px;
+    }
+    to{
+        box-shadow: 3px 3px 3px 3px var(--shadow);
+        height: 52.5px;
+        width: 210px;
+    }
+}
+
+@keyframes continueClick{
+    0%{
+        background-color: var(--mainhovered);
+        box-shadow: 5px 5px var(--third);
+        width: 210px;
+    }
+    25%{
+        box-shadow: 7px 7px var(--third);
+    }
+    100%{
+        background-color: #ea1c2d;
+        box-shadow: 2px 2px var(--third);
+        width: 190px;
+    }
+}
+
+#hex{
+    text-align: center;
+}
+
+#game-card-holder{
+    margin: 10px 0;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 40px;
 }
 
 #cart{
