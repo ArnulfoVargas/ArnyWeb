@@ -29,6 +29,12 @@ let clicked_index = 0;
 let locked = false;
 const high_score = localStorage.getItem("high");
 
+const high_score_text = document.getElementById("record");
+high_score_text.innerText = high_score;
+
+const score_text = document.getElementById("score-txt");
+score_text.innerText = 0;
+
 let score = 0;
 
 function setNewColors(){
@@ -82,10 +88,13 @@ function onClickButton(e){
         if(high_score == null || high_score < score)
         {
             localStorage.setItem("high", score);
+            high_score_text.innerText = score;
         }
 
         score = 0;
     }
+
+    score_text.innerText = score;
 
     continue_button.firstChild.innerText = "Continue"
     continue_button.className = "continue-button"

@@ -323,6 +323,7 @@ footer{
 .cart-merch-data{
     grid-row: 1/span 2;
     font-size: 1.25rem;
+    overflow-y: hidden;
 }
 
 .price-text{
@@ -530,6 +531,19 @@ footer{
     }
 }
 
+.score-title{
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: var(--title-font);
+}
+
+.score-value{
+    margin: 0;
+    font-size: 2rem;
+    font-family: var(--main-font);
+}
+
 #hex{
     text-align: center;
 }
@@ -646,4 +660,21 @@ footer{
 
 #footer-corp{
     flex-grow: var(--flex-grow);
+}
+
+#user-data{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+    width: 100%;
+    height: 100px;
+    justify-content: center;
+    gap: 10%;
+}
+
+#score{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
 }
