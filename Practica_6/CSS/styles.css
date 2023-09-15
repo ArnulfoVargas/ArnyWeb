@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+/*
+
+blanquito : #F2F2F2
+rojo aca vivo : #D92525
+verde mexico : #044040
+rojo casi tinto : #591C21
+rojo no tan tinto : #8C1F28 
+
+*/
+
+:root{
+    --title-text: 'Kanit', sans-serif;
+    --normal-text: Poppins;
+    
+    --light-color: #F2F2F2;
+    --border-color: #591C21;
+    --nav-bg: #D92525;
+}
+body{
+    background-color: var(--light-color);
+    margin: 0;
+}
+
+footer{
+    height: 50px;
+}
+
+nav{
+    display: flex;
+    height: 75px;
+    justify-content: center;
+    align-items: center;
+
+    font-family: var(--title-text);
+    background-color: var(--nav-bg);
+    color: var(--light-color);
+
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    margin-bottom: 20px;
+}
+
+.title{
+    text-align: center;
+    font-family: var(--title-text);
+    font-size: 2rem;
+
+    opacity: 0;
+
+    animation-name: textFadeIn;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+.normal-text{
+    font-family: var(--normal-text);
+    font-size: 1.25rem;
+
+    opacity: 0;
+
+    animation-name: textFadeIn;
+    animation-duration: .75s;
+    animation-fill-mode: forwards;
+    animation-delay: .35s;
+}
+
+.autor-text{
+    font-family: var(--normal-text);
+    font-size: 1.4rem;
+    text-align: end;
+
+    opacity: 0;
+
+    animation-name: textFadeIn;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-delay: .7s;
+}
+
+@keyframes textFadeIn {
+    from{
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.base-container{
+    height: 400px;
+    width: 600px;
+    border: solid 5px var(--border-color);
+}
+
+.flex-a-center{
+    display: flex;
+    align-items: center;
+}
+
+.flex-j-center{
+    display: flex;
+    justify-content: center;
+}
+
+#flex-center{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+}
+
+#spinning-square{
+    height: 20px;
+    width: 20px;
+    background-color: blue;
+
+    animation-name: spiningCube;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes spiningCube{
+    0%{
+        transform: translateX(0) rotate(0deg);
+    }
+    25%{
+        transform: translateX(145px) rotate(180deg);
+    }
+    50%{
+        transform: translateX(290px) rotate(360deg);
+    }
+    75%{
+        transform: translateX(435px) rotate(540deg);
+    }
+    100%{
+        transform: translateX(580px) rotate(720deg);
+    }
+}
+
+.grow-container #growing-square{
+    width: 0%;
+    height: 0%;
+
+    background-color: brown;
+
+    transition-property: width, height;
+    transition-duration: .4s;
+    transition-timing-function: cubic-bezier(0.43, 1.83, 0.84, 0.68);
+}
+
+.grow-container:hover #growing-square{
+    width: 100%;
+    height: 100%;
+}
+
+#spinning-circle{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: cyan;
+    border: solid 4px blue;
+
+    animation-name: spinningCircle;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes spinningCircle{
+    from{
+        transform: rotate(0deg) translateX(100px);
+    }
+    to{
+        transform: rotate(360deg) translateX(100px);
+    }
+}
+
+#feedback-button{
+    width: 125px;
+    height: 50px;
+    font-size: 1.2rem;
+    font-family: var(--normal-text);
+    border-radius: 10px;
+    color: black;
+    background-color: gainsboro;
+    border: solid 3px black;
+
+    transition-property: border, color, background-color;
+    transition-timing-function: linear;
+    transition-duration: .3s;
+}
+
+#feedback-button:hover{
+    color: white;
+    background-color: cornflowerblue;
+    border: dashed 4px white;
+}
+
+#uwu-button{
+    width: 125px;
+    height: 50px;
+    background-color: #434343;
+    color: white;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    font-family: var(--normal-text);
+
+    transition-property: width, height, background-color, font-size;
+    transition-duration: .25s;
+    transition-timing-function: linear;
+}
+
+#uwu-button:active{
+    width: 110px;
+    height: 45px;
+    background-color: #D92525;
+    font-size: 1rem;
+
+    animation-name: shake;
+    animation-duration: .1s;
+    animation-iteration-count: infinite;
+
+    transition-property: width, height, background-color;
+    transition-duration: .1s;
+    transition-timing-function: cubic-bezier(0,-3.04, 0,-7.2);
+}
+
+#uwu-button::after{
+    content: "Touch Me";
+}
+
+#uwu-button:active:after{
+    content: "(⁠≧⁠ω⁠≦⁠)👉👈";
+}
+
+@keyframes shake{
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
