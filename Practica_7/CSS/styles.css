@@ -1,0 +1,493 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600&display=swap');
+
+:root{
+    --border-radius: 30px;
+}
+
+body{
+    margin: 0;
+}
+
+nav{
+    height: 75px;
+    background-color: #D80032;
+    padding-left: 20px;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    box-shadow: 1px 1px 2px 2px rgba(84, 84, 84, 0.446);
+}
+
+*{
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.title{
+    font-weight: 600;
+    font-size: 2rem;
+    text-align: center;
+    margin: 10px;
+}
+
+.section{
+    height: 300px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.score-title{
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+    margin: 0;
+}
+
+.container-score{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.score-value{
+    font-size: 4rem;
+    font-weight: 600;
+    color: white;
+    margin: 0;
+}
+
+.card-holder{
+    height: 250px;
+    width: 250px;
+    border-radius: var(--border-radius);
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-holder:hover .card{
+    transform: scale(1);
+}
+
+.card-holder:active .card{
+    transform: scale(1);
+    background-color: #477aa1;
+    color: white;
+}
+
+.card{
+    height: 250px;
+    width: 250px;
+    border-radius: var(--border-radius);
+    background-color: white;
+    padding-top: 10px;
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-rows: 2fr 1fr;
+
+    transform: scale(.9);
+    transition: all ease-in .1s;
+}
+
+.card  img{
+    height: 166.6px;
+}
+
+.card p{
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+#team-1{
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    gap: 20px;
+}
+
+#container-score-blue{
+    background-color: #477aa1;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+#blue{
+    background-color: #26577C;
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+#team-2{
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    gap: 20px;
+}
+
+#container-score-red{
+    background-color: #cc4162;
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+#red{
+    background-color: #D80032;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    order: 2;
+}
+
+#vs{
+    height: 100px;
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 600;
+    font-size: 3rem;
+}
+
+#sections-container{
+    display: flex;
+    flex-direction: column;
+
+    width: 80%;
+    margin: 0 auto;
+    border-radius: var(--border-radius);
+    background-color: rgb(231, 231, 231);
+    gap: 10px;
+    
+    padding: 20px;
+}
+
+@media (max-width: 640px){
+
+    nav{
+        height: 55px;
+        background-color: #D80032;
+        color: white;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .title{
+        font-weight: 600;
+        font-size: 1.5rem;
+        text-align: center;
+        margin: 10px;
+    }
+    
+    .section{
+        height: 425px;
+        width: 145px;
+    
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .score-title{
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: white;
+        margin: 0;
+    }
+    
+    .container-score{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        height: 90px;
+    }
+    
+    .score-value{
+        font-size: 3rem;
+        font-weight: 600;
+        color: white;
+        margin: 0;
+    }
+    
+    .card-holder{
+        height: 145px;
+        width: 145px;
+        border-radius: var(--border-radius);
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .card-holder:active .card{
+       animation-name: onTouch;
+       animation-duration: .75s;
+       animation-fill-mode: forwards;
+    }
+
+    @keyframes onTouch {
+        0%{
+            background-color: white;
+            color: black;
+        }
+        50%{
+            background-color: #477aa1;
+            color: white;
+        }
+        100%{
+            background-color: white;
+            color: black;
+        }
+    }
+    
+    .card{
+        height: 120px;
+        width: 120px;
+        border-radius: 20px;
+        background-color: white;
+    
+        padding-top: 0;
+
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-rows: 2fr 1fr;
+
+        transform: none;
+        transition: none;
+    }
+    
+    .card  img{
+        height: 80px;
+    }
+    
+    .card p{
+        text-align: center;
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+    
+    #team-1{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    #container-score-blue{
+        background-color: #477aa1;
+        border-radius: var(--border-radius) var(--border-radius) 0 0;
+    }
+    
+    #blue{
+        background-color: #26577C;
+        border-radius: 0 0 var(--border-radius) var(--border-radius);
+    }
+    
+    #team-2{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #container-score-red{
+        background-color: #cc4162;
+        border-radius: var(--border-radius) var(--border-radius) 0 0 ;
+    }
+    
+    #red{
+        background-color: #D80032;
+        border-radius: 0 0 var(--border-radius) var(--border-radius);
+    }
+    
+    #vs{
+        display: none;
+    }
+    
+    #sections-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 10px 0;
+        width: 100%;
+        justify-content: space-around;
+        background-color: rgb(231, 231, 231);
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1280px){
+    nav{
+        height: 75px;
+        background-color: #D80032;
+        color: white;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .title{
+        font-weight: 600;
+        font-size: 1.75rem;
+        text-align: center;
+        margin: 10px;
+    }
+    
+    .section{
+        height: 530px;
+        width: 200px;
+    
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .score-title{
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: white;
+        margin: 0;
+    }
+    
+    .container-score{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        height: 90px;
+    }
+
+    .score-title{
+        display: none;
+    }
+    
+    .score-value{
+        font-size: 2rem;
+        font-weight: 600;
+        color: white;
+        margin: 0;
+    }
+    
+    .card-holder{
+        height: 150px;
+        width: 150px;
+        border-radius: var(--border-radius);
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .card-holder:active .card{
+       animation-name: onTouch;
+       animation-duration: .75s;
+       animation-fill-mode: forwards;
+    }
+
+    @keyframes onTouch {
+        0%{
+            background-color: white;
+            color: black;
+        }
+        50%{
+            background-color: #477aa1;
+            color: white;
+        }
+        100%{
+            background-color: white;
+            color: black;
+        }
+    }
+    
+    .card{
+        height: 150px;
+        width: 150px;
+        border-radius: var(--border-radius);
+        background-color: white;
+    
+        padding-top: 10px;
+
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-rows: 2fr 1fr;
+
+        transform: none;
+        transition: none;
+    }
+    
+    .card  img{
+        height: 100px;
+    }
+    
+    .card p{
+        text-align: center;
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+    
+    #team-1{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    #vs{
+        display: none;
+    }
+    
+    #container-score-blue{
+        height: 530px;
+        width: 70px;
+
+        display: flex;
+
+        background-color: #477aa1;
+        border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    }
+    
+    #blue{
+        background-color: #26577C;
+        border-radius: var(--border-radius) 0 0 var(--border-radius);
+    }
+    
+    #team-2{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    #container-score-red{
+        height: 530px;
+        width: 70px;
+
+        display: flex;
+
+        background-color: #cc4162;
+        border-radius: var(--border-radius) 0 0 var(--border-radius);
+    }
+    
+    #red{
+        background-color: #D80032;
+        border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    }
+    
+    #sections-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 90%;
+        justify-content: space-around;
+        background-color: rgb(231, 231, 231);
+    }
+}

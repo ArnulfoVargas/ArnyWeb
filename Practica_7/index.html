@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./CSS/styles.css">
+</head>
+<body>
+    <nav>
+       <p class="title">Piedra, Papel o Tijera</p>
+    </nav>
+
+    <p class="title">Escoge tu arma</p>
+
+    <div id="sections-container">
+        <div id="team-1">
+            <div class="section" id="blue">
+                
+                <div class="card-holder" id="rock">
+                    <div class="card">
+                        <img src="./images/LaRoca.png" alt="">
+    
+                        <p>Piedra</p>
+                    </div>
+                </div>
+
+                <div class="card-holder" id="paper">
+                    <div class="card">
+                        <img src="./images/papel.png" alt="">
+    
+                        <p>Papel</p>
+                    </div>
+                </div>
+
+                <div class="card-holder" id="scissors">
+                    <div class="card">
+                        <img src="./images/scissors.png" alt="">
+    
+                        <p>Tijera</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="container-score" id="container-score-blue">
+                <p class="score-title">Score:</p>
+                <p class="score-value" id="blue-score">0</p>
+            </div>
+        </div>
+        <div id="vs">
+            <p>VS</p>
+        </div>
+        <div id="team-2">
+            <div class="section" id="red">
+
+                <div class="card" id="e-rock">
+                    <img src="./images/LaRoca.png">
+
+                    <p>Piedra</p>
+                </div>
+
+                <div class="card" id="e-paper">
+                    <img src="./images/papel.png">
+
+                    <p>Papel</p>
+                </div>
+
+                <div class="card" id="e-scissors">
+                    <img src="./images/scissors.png">
+
+                    <p>Tijeras</p>
+                </div>
+                
+            </div>
+
+            <div class="container-score" id="container-score-red">
+                <p class="score-title">Score:</p>
+                <p class="score-value" id="red-score">0</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./JS/index.js" type="module"></script>
+</body>
+</html>
