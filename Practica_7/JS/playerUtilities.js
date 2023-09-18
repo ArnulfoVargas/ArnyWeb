@@ -29,7 +29,7 @@ export const init = () => {
             setTimeout(()=>{
                 child.style.backgroundColor = "white"
                 reset()
-                }, 500)
+                }, 250)
         })
     }
 }
