@@ -1,6 +1,6 @@
 import { useState } from "react"
 import data from "./data/data"
-import UserList from "./components/userList"
+import UserList from "./components/UserList"
 
 
 const MainApp = () => {
@@ -9,7 +9,9 @@ const MainApp = () => {
 
     const updatePeople = () => {
         setPeople([])
+        
     }
+
 
     return (
         <article className="container">
