@@ -1,55 +1,65 @@
-/*
-    ! Etiquetas
-    ! Clases
-    ! Id
-    ! Media Queries
-*/
+#nav{
+    background-color: rgb(239, 239, 239);
+    height: 75px;
+    width: 350px;
 
-body{
-    margin: 0;
-}
+    position: relative;
 
-.container{
-    height: 250px;
-    width: 250px;
-    border-radius: 10%;
-}
-
-.box{
-    box-shadow: 5px 5px 5px 5px black;
-}
-
-#uno{
-    background-color: cadetblue;
-}
-
-#dos{
-    background-color: darkcyan;
-}
-
-#flex{
     display: flex;
-    flex-direction: row;
-    width: 100vw;  /* ? vw = Viewport Width  vh = Viewport Height */
-    height: 250px;
-
-    justify-content: space-around;
+    justify-content: center;
+    margin: 0 auto;
 }
 
-@media (max-width: 500px){
-    #flex{
-        flex-direction: column;
-        align-items: center;
-        height: 750px;
-    }
+#btn-l{
+    padding-left: 80px;
+}
+#btn-r{
+    padding-right: 80px;
+}
+.home-btn{
+    background-color: yellow;
+    position: absolute;
+    height: 100%;
+    z-index: 1;
+
+    top: 0;
+    left: 0;
+    width: 100px;
+
+    clip-path: polygon(0px 0px, 70px 0px, 100px 100px, 0px 100px);
 }
 
-@media (min-width: 501px) and (max-width: 1000px){
-    #uno{
-        background-color: crimson;
-    }
-    
-    #dos{
-        background-color: indigo;
-    }
+.about-btn{
+    background-color: yellow;
+    position: absolute;
+    z-index: 1;
+
+    top: 0;
+    right: 0;
+
+    height: 100%;
+    width: 100px;
+
+    clip-path: polygon(0px 0px, 100px 0px, 100px 100px, 30px 100px);
+}
+
+.about-btn:hover, .home-btn:hover{
+    background-color: rgb(216, 216, 0);
+}
+
+.normal-btn{
+    width: 50%;
+    height: calc(100% - 4px);
+    border: solid 2px yellow;
+}
+
+.normal-btn:hover{
+    width: 50%;
+    background-color: rgb(208, 208, 208);
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
