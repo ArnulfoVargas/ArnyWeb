@@ -10,22 +10,11 @@
 </head>
 <body>
     
-    <div id="nav">
-
-        <div class="normal-btn btn" id="btn-l">
-            <p>Yup</p>
-        </div>
-
-        <div class="normal-btn btn" id="btn-r">
-            <p>About</p>
-        </div>
-
-        <div class="home-btn btn">
-            <p>Home</p>
-        </div>
-        <div class="about-btn btn">
-            <p>Contact</p>
-        </div>
-    </div>
+    {
+        open
+        ? return <p>&#9776;</p>
+        : return <p>&#10006;</p>
+    }
+    
 </body>
 </html>

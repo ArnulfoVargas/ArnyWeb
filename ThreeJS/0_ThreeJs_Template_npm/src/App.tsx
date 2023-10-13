@@ -28,8 +28,7 @@ function doThreeJS(){
   //renderer.setPixelRatio(window.devicePixelRatio); //opciones aestethic
   renderer.setSize( window.innerWidth, window.innerHeight );
 
-  const controls = new OrbitControls( camera, renderer.domElement );
-
+  controls.update();
   document.body.appendChild( renderer.domElement );
 
   const geometry = new THREE.BoxGeometry( 1, 1, 1 );
