@@ -30,13 +30,13 @@ function doThreeJS(){
 
   //1 ============================================================ Iluminacion con HDRI y reflejos
   const loader = new RGBELoader();
-  loader.load('/environments/christmas_photo_studio_07_1k.hdr', (element) => {
+  loader.load('/environments/BGL.hdr', (element) => {
     element.mapping = THREE.EquirectangularRefractionMapping
     scene.environment = element
   }, )
 
   const jpgloader = new THREE.TextureLoader();
-  jpgloader.load('/environments/christmas_photo_studio_07.jpg', (element) => {
+  jpgloader.load('/environments/BG.jpg', (element) => {
     element.mapping = THREE.EquirectangularRefractionMapping;
     scene.background = element;
   })
@@ -79,7 +79,7 @@ function doThreeJS(){
   greetings.style.color = 'white'
   greetings.style.backgroundColor = 'black'
   greetings.style.textAlign = 'center'
-  greetings.style.fontStyle = '2rem'
+  greetings.style.fontSize = '2rem'
   greetings.style.display = 'none'
   etiquetasRenderer.domElement.appendChild(greetings)
 
